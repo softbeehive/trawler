@@ -1,0 +1,42 @@
+<!-- Add operation -->
+<div class="tw-operation clearfix">
+    <div class="col-md-4 col-md-offset-4">
+        <form class="operation-form" role="form" action="/trawler/add">
+            <label for="operation-input"><?php echo $this->translate('Think of operation code name') ?></label>
+            <div class="input-group">
+                <input id="operation-input" class="form-control" type="text" placeholder="<?php echo $this->translate('e.g. education') ?>">
+                <span class="input-group-btn">
+                    <button id="run" class="btn btn-default" type="submit"><?php echo $this->translate('Go!') ?></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Spinner -->
+<div class="spinner-box">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
+
+<!-- Operation list -->
+<div class="tw-op-list">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <label class="tw-op-hist"><?php echo $this->translate('History of operations') ?></label>
+            <div class="row append-op-unit">
+                <?php foreach ($rows as $row): ?>
+                <div class="tw-op-unit col-md-2">
+                    <a href="#" data-keyword="<?php echo $row->id ?>" class="intel btn btn-primary btn-block"><?php echo $this->escapeHtml($row->keyword) ?></a>
+                </div>
+                <?php endforeach ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Append results -->
+<div class="tw-append"></div>

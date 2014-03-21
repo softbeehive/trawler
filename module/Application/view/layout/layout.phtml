@@ -1,0 +1,39 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle($this->translate('Flickr Ocean Trawler'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+            ->prependStylesheet($this->basePath() . '/css/bootstrap.css')
+            ->prependStylesheet($this->basePath() . '/css/visual.css') ?>
+    </head>
+    <body>
+        <div class="tw-main">
+            <div class="tw-header"><?php echo $this->translate('EF Full Stack Technical Task') ?></div>
+            <div class="tw-content">
+                <!-- Name -->
+                <div class="tw-name">
+                    <h1 class="tw-fot"><a href="/">Flickr Ocean Trawler</a></h1>
+                    <div class=""><a href="https://github.com/softbeehive">by Oleksandr Bystrikov</a></div>
+                </div>
+                <?php echo $this->content ?>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+            ->prependFile($this->basePath() . '/js/trawler.js')
+            ->prependFile($this->basePath() . '/js/vendor/bootstrap.min.js')
+            ->prependFile($this->basePath() . '/js/vendor/jquery-1.11.0.min.js')            
+        ?>
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>

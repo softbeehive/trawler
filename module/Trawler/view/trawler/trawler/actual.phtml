@@ -1,0 +1,55 @@
+<?php if (!isset($error)): ?>
+<!-- actual popup -->
+<div class="tw-popup act">
+    <div class="tw-popup-header clearfix">
+        <div class="pull-left">
+            <h3>
+                <span><?php echo $this->translate('Operation') ?></span> 
+                <span class="op-nick"><?php if(isset($keywordRow->keyword)) echo "&ldquo;". $this->escapeHtml($keywordRow->keyword) ."&rdquo;"?></span>
+            </h3>
+        </div>
+        <button type="button" class="close" aria-hidden="true">&times;</button>
+    </div>
+    <div class="tw-op-type">
+        <div class="row">
+            <div class="col-md-6">
+                <a class="btn btn-default btn-lg btn-block intel" data-keyword="<?php if (isset($keywordRow->id)) echo $keywordRow->id ?>" href="#">
+                    <?php echo $this->translate('Intelligence') ?>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a class="btn btn-default btn-lg btn-block actual active" data-keyword="<?php if (isset($keywordRow->id)) echo $keywordRow->id ?>" href="#">
+                    <?php echo $this->translate('Actual results') ?>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="tw-popup-content">
+        <div class="tw-grid">
+            <div class="row">
+                <?php if (!empty($results)): ?>
+                    <?php foreach ($results as $result): ?>
+                    <?php 
+                        $constructStaticUrl = "http://farm".$result->farm.".staticflickr.com/".$result->server."/".$result->img_id."_".$result->secret."_n.jpg";
+                        $constructUrl = "http://flickr.com/photos/".$result->owner."/".$result->img_id."/";
+                    ?>
+                    <div class="col-md-3 tw-grid-image">
+                        <a href="<?php echo $constructUrl ?>"><img class="img-rounded img-responsive" src="<?php echo $constructStaticUrl ?>"></a>
+                        <p><?php echo $result->title?></p>
+                    </div>
+                    <?php endforeach ?>
+                <?php endif ?>
+            </div>
+        </div>
+    </div>
+</div>
+<?php else: ?>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <?php echo $this->translate('Somehow operation id was missed. That\'s why you\'ve got no result.') ?>
+        </div>
+    </div>
+</div>
+<?php endif ?>

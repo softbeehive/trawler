@@ -1,0 +1,72 @@
+<?php if (!isset($error)): ?>
+<!-- intelligence popup -->
+<div class="tw-popup int">
+    <div class="tw-popup-header clearfix">
+        <div class="pull-left">
+            <h3>
+                <span><?php echo $this->translate('Operation') ?></span> 
+                <span class="op-nick"><?php if (isset($keywordRow->keyword)) echo "&ldquo;". $this->escapeHtml($keywordRow->keyword) ."&rdquo;"?></span>
+            </h3>
+        </div>
+        <button type="button" class="close" aria-hidden="true">&times;</button>
+    </div>
+    <div class="tw-op-type">
+        <div class="row">
+            <div class="col-md-6">
+                <a class="btn btn-default btn-lg btn-block active intel" data-keyword="<?php if (isset($keywordRow->id)) echo $keywordRow->id ?>" href="#">
+                    <?php echo $this->translate('Intelligence') ?>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a class="btn btn-default btn-lg btn-block actual" data-keyword="<?php if (isset($keywordRow->id)) echo $keywordRow->id ?>" href="#">
+                    <?php echo $this->translate('Actual results') ?>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="tw-popup-content">
+        <table class="table tw-intel-table">
+            <thead>
+                <tr>
+                    <th class="num">#</th>
+                    <th class="title"><?php echo $this->translate('title') ?></th>
+                    <th class="owner"><?php echo $this->translate('owner') ?></th>
+                    <th class="size"><?php echo $this->translate('size') ?></th>
+                    <th class="url"><?php echo $this->translate('url') ?></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php $na = "&ndash;" ?>
+                <?php foreach ($results as $result): ?>
+                <?php 
+                    static $counter = 0;
+                    $counter++;
+                ?>
+                <tr>
+                    <td><?php echo $counter ?></td>
+                    <td><?php echo (isset($result->title) ? $result->title : $na) ?></td>
+                    <td><?php echo (isset($result->owner_name) ? $result->owner_name : $na) ?></td>
+                    <td><?php echo (isset($result->width) && ($result->height) ? $result->width . " x " . $result->height : $na) ?></td>
+                    <td>
+                        <?php if (isset($result->url)): ?>
+                        <a href="<?php echo $result->url ?>" target="_blank"><?php echo $result->url ?></a>
+                        <?php else: ?>
+                        <?php echo $na ?>
+                        <?php endif ?>
+                    </td>
+                </tr>
+                <?php endforeach ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+<?php else: ?>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <?php echo $this->translate('Somehow operation id was missed. That\'s why you\'ve got no result.') ?>
+        </div>
+    </div>
+</div>
+<?php endif ?>

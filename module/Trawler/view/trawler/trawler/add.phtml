@@ -1,0 +1,16 @@
+<?php if (!isset($error)): ?>
+<div class="tw-op-unit col-md-2">
+    <a href="#" data-keyword="<?php if (isset($kid)) echo $kid ?>" class="intel btn btn-success btn-block">
+        <?php if (isset($keyword)) echo $this->escapeHtml($keyword) ?>
+    </a>
+</div>
+<?php else: ?>
+<div class="tw-add row">
+    <div class="col-md-10">
+        <div class="alert alert-danger alert-dismissable">
+             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+             <?php echo $this->translate('Something went wrong') ?>
+         </div>
+    </div>
+</div>
+<?php endif ?>
