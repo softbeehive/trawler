@@ -4,14 +4,14 @@ Flickr Ocean Trawler
 Introduction
 ------------
 
-Well let's start from idea. Inspiration came when I was thinking about physical aspect of word "scraping", I remembered WWI and mine sweepers, which are associated with British navy. German mines - British naval trawlers. I found ideal picture which illustrated spirit of my imagination (this one <http://3.bp.blogspot.com/-aO9Jsgz5QzE/T89pZO-3oGI/AAAAAAAAB18/_eQ9UzfXq2Q/s1600/Pair+of+trawlers+sweeping+row+of+anchored+mines+in+WWI.jpg>).
+- Live: http://ef.softbeehive.com/
+- Code: https://github.com/softbeehive/trawler
+- Video demonstration: http://youtu.be/HYL9hb6UegU (watch in HD 1080 with subtitles)
+
+Well let's start from idea. Inspiration came when I was thinking about physical aspect of word "scraping", I remembered WWI and mine sweepers, which are associated with British navy. German mines - British naval trawlers. I found ideal picture which illustrated spirit of my imagination ([this one](http://3.bp.blogspot.com/-aO9Jsgz5QzE/T89pZO-3oGI/AAAAAAAAB18/_eQ9UzfXq2Q/s1600/Pair+of+trawlers+sweeping+row+of+anchored+mines+in+WWI.jpg).
 
 So I called it Flickr Ocean Trawler. Search terms are called "operations". They are stored in history of operations. I even created unique graphical style, exclusively drew trawler using my Intuos 5 pen tablet.
 Every operation's representation works in two modes: intelligence (table way) and actual results (visual way). I even tried to visualize mines and trawling process using canvas, but it requires plenty of time and efforts.
-
-Live: http://ef.softbeehive.com/
-Code: https://github.com/softbeehive/trawler
-Video demonstration: http://youtu.be/HYL9hb6UegU (watch in HD 1080 with subtitles)
 
 During coding I followed SOLID principles as much as possible, if we go through the task I did much more than was asked to shape it as real world product. Technically it works accordingly next algorithm: passing query - getting results from Flickr by API - processing and saving data to MySQL - rendering view. And yeah, it works as single page application without page refreshing.
 
@@ -24,3 +24,7 @@ Of course, I know what has to be improved and added:
 - db save algorithm impovement
 - graphical part
 - pagination or ajax load on scroll 
+
+Task
+------------
+Take a look at https://
