@@ -8,7 +8,7 @@ Introduction
 - Code: https://github.com/softbeehive/trawler
 - Video demonstration: http://youtu.be/HYL9hb6UegU (watch in HD 1080 with subtitles)
 
-Well let's start from idea. Inspiration came when I was thinking about physical aspect of word "scraping", I remembered WWI and mine sweepers, which are associated with British navy. German mines - British naval trawlers. I found ideal picture which illustrated spirit of my imagination ([this one](http://3.bp.blogspot.com/-aO9Jsgz5QzE/T89pZO-3oGI/AAAAAAAAB18/_eQ9UzfXq2Q/s1600/Pair+of+trawlers+sweeping+row+of+anchored+mines+in+WWI.jpg).
+Well let's start from idea. Inspiration came when I was thinking about physical aspect of word "scraping", I remembered WWI and mine sweepers, which are associated with British navy. German mines - British naval trawlers. I found ideal picture which illustrated spirit of my imagination ([this one](http://3.bp.blogspot.com/-aO9Jsgz5QzE/T89pZO-3oGI/AAAAAAAAB18/_eQ9UzfXq2Q/s1600/Pair+of+trawlers+sweeping+row+of+anchored+mines+in+WWI.jpg)).
 
 So I called it Flickr Ocean Trawler. Search terms are called "operations". They are stored in history of operations. I even created unique graphical style, exclusively drew trawler using my Intuos 5 pen tablet.
 Every operation's representation works in two modes: intelligence (table way) and actual results (visual way). I even tried to visualize mines and trawling process using canvas, but it requires plenty of time and efforts.
