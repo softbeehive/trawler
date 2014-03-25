@@ -27,4 +27,4 @@ Of course, I know what has to be improved and added:
 
 Task
 ------------
-Take a look at https://
+Take a look at https://github.com/softbeehive/trawler/blob/master/task.md
