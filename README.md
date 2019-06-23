@@ -4,9 +4,6 @@ Flickr Ocean Trawler
 Introduction
 ------------
 
-- Live: http://ef.softbeehive.com/
-- Code: https://github.com/softbeehive/trawler
-
 I always start from idea. This time inspiration came when I was thinking about physical aspect of word "scraping", I remembered WWI and mine sweepers, which are associated with British navy and German submarines. British naval trawlers are looking for underwater mines. I found ideal picture which illustrated spirit of my imagination ([this one](http://3.bp.blogspot.com/-aO9Jsgz5QzE/T89pZO-3oGI/AAAAAAAAB18/_eQ9UzfXq2Q/s1600/Pair+of+trawlers+sweeping+row+of+anchored+mines+in+WWI.jpg)).
 
 So I called it Flickr Ocean Trawler. Search terms are called "operations". They are stored in history of operations. I created unique graphical style, exclusively drew trawler using my Intuos 5 pen tablet.
